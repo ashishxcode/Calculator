@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="0.5dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        style="@style/AppTheme.PopupOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/appToolBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity=""
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/inputeNumberTextView"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appToolBar"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="end"
+            android:scrollbars="vertical"
+            android:textSize="40sp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/clearButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/clear"
+            android:textSize="30sp"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/parenthesesButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/parentheses"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/percentButton"
+
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/percent"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/divisionButton"
+
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/division"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/sevenButton"
+
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/_7"
+            android:textSize="30sp"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/eightButton"
+
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/_8"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/nineButton"
+
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/_9"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/multiplicationButton"
+
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/x"
+            android:textAllCaps="false"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/fourButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/_4"
+            android:textSize="30sp"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/fiveButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/_5"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/siXButton"
+
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/_6"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/subtractionButton"
+
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/subtraction"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/oneButton"
+
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/_1"
+            android:textSize="30sp"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/twoButton"
+
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/_2"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/threeButton"
+
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/_3"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/additionButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/addition"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/zeroButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/_0"
+            android:textSize="30sp"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/dotButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/dot"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/equalButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/state_pressed_ripple"
+            android:text="@string/equal"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+</LinearLayout>
