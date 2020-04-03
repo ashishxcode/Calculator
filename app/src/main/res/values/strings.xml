@@ -1,24 +1,32 @@
 <resources>
     <string name="app_name">Calculator</string>
-    <string name="equal_button">=</string>
-
-    <string name="clear">C</string>
-    <string name="parentheses">( )</string>
-    <string name="percent">%</string>
-    <string name="division">÷</string>
+    <string name="nothing_to_show">Nothing to Show</string>
+    <string name="back_icon">Back Icon</string>
+    <string name="sin">sin</string>
+    <string name="ac">AC</string>
+    <string name="parenthesesopen">(</string>
+    <string name="parenthesesclose">)</string>
+    <string name="back">←</string>
+    <string name="cos">cos</string>
     <string name="_7">7</string>
     <string name="_8">8</string>
     <string name="_9">9</string>
-    <string name="x">x</string>
+    <string name="division">/</string>
+    <string name="tan">tan</string>
     <string name="_4">4</string>
     <string name="_5">5</string>
     <string name="_6">6</string>
-    <string name="subtraction">-</string>
+    <string name="mult">*</string>
+    <string name="x_y">x^y</string>
     <string name="_1">1</string>
     <string name="_2">2</string>
     <string name="_3">3</string>
-    <string name="addition">+</string>
-    <string name="_0">0</string>
+    <string name="minus">-</string>
+    <string name="sqrt">sqrt</string>
     <string name="dot">.</string>
+    <string name="_0">0</string>
     <string name="equal">=</string>
+    <string name="plus">+</string>
+    <string name="date">Date</string>
+    <string name="main">Main</string>
 </resources>

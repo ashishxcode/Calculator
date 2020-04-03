@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="20dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/timeStamp"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/date"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/type"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/main"
+            android:visibility="invisible"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/expr"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timeStamp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/result"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/expr"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -7,300 +7,402 @@
     android:layout_height="match_parent"
     android:layout_marginTop="0.5dp"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
-
-    <RelativeLayout
-        style="@style/AppTheme.PopupOverlay"
+    <androidx.cardview.widget.CardView
+        style="@style/CardView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3">
+        android:layout_height="300dp"
+        tools:ignore="PrivateResource">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/appToolBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_gravity=""
-            android:background="@android:color/transparent" />
-
-        <TextView
-            android:id="@+id/inputeNumberTextView"
-            style="@style/TextAppearance.AppCompat.Headline"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/appToolBar"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="@font/lato_bold"
-            android:gravity="end"
-            android:scrollbars="vertical"
-            android:textSize="40sp" />
+            android:layout_height="wrap_content">
 
-    </RelativeLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/appToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent" />
 
+
+            <TextView
+                android:id="@+id/expr"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/appToolBar"
+                android:ellipsize="start"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="end"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/result"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expr"
+                android:ellipsize="end"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="end"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:textSize="30sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
-        style="@style/AppTheme"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/clearButton"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/clear"
-            android:textSize="30sp"
-            tools:ignore="NestedWeights" />
+            android:orientation="horizontal"
+            tools:ignore="NestedWeights">
 
-        <Button
-            android:id="@+id/parenthesesButton"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            <Button
+                android:id="@+id/sin"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/sin"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/ce"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/ac"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/openBrc"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/parenthesesopen"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/closeBrc"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/parenthesesclose"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/back"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/back"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/parentheses"
-            android:textSize="30sp" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/percentButton"
+            <Button
+                android:id="@+id/cos"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/cos"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
 
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            <Button
+                android:id="@+id/seven"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/_7"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/eight"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/_8"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/nine"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/_9"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/div"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/division"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/percent"
-            android:textSize="30sp" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/divisionButton"
+            <Button
+                android:id="@+id/tan"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/tan"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
 
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            <Button
+                android:id="@+id/four"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/_4"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/five"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/_5"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/six"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/_6"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/mul"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/mult"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/division"
-            android:textSize="30sp" />
-    </LinearLayout>
+            android:orientation="horizontal">
 
-    <LinearLayout
-        style="@style/AppTheme"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+            <Button
+                android:id="@+id/pow"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/x_y"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/sevenButton"
+            <Button
+                android:id="@+id/one"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/_1"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
 
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            <Button
+                android:id="@+id/two"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/_2"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/three"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/_3"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/minus"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/minus"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/_7"
-            android:textSize="30sp"
-            tools:ignore="NestedWeights" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/eightButton"
 
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/_8"
-            android:textSize="30sp" />
+            <Button
+                android:id="@+id/sqroot"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/sqrt"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/nineButton"
+            <Button
+                android:id="@+id/dot"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/dot"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
 
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/_9"
-            android:textSize="30sp" />
+            <Button
+                android:id="@+id/zero"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/_0"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/multiplicationButton"
 
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/x"
-            android:textAllCaps="false"
-            android:textSize="30sp" />
-    </LinearLayout>
+            <Button
+                android:id="@+id/equals"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/equal"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
 
-    <LinearLayout
-        style="@style/AppTheme"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+            <Button
+                android:id="@+id/plus"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/state_pressed_ripple"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/plus"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/fourButton"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/_4"
-            android:textSize="30sp"
-            tools:ignore="NestedWeights" />
-
-        <Button
-            android:id="@+id/fiveButton"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/_5"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/siXButton"
-
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/_6"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/subtractionButton"
-
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/subtraction"
-            android:textSize="30sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        style="@style/AppTheme"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/oneButton"
-
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/_1"
-            android:textSize="30sp"
-            tools:ignore="NestedWeights" />
-
-        <Button
-            android:id="@+id/twoButton"
-
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/_2"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/threeButton"
-
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/_3"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/additionButton"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/addition"
-            android:textSize="30sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        style="@style/AppTheme"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/zeroButton"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/_0"
-            android:textSize="30sp"
-            tools:ignore="NestedWeights" />
-
-        <Button
-            android:id="@+id/dotButton"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:fontFamily="@font/lato_bold"
-            android:text="@string/dot"
-            android:textSize="30sp" />
-
-        <Button
-            android:id="@+id/equalButton"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/state_pressed_ripple"
-            android:text="@string/equal"
-            android:textSize="30sp" />
     </LinearLayout>
 
 </LinearLayout>
